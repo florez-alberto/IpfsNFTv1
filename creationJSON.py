@@ -52,7 +52,7 @@ def set_json(img_ipfs_list):
         txt='{\n "description": "'+description+'",\n "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",\n "image": "https://ipfs.io/ipfs/'+a+'",\n "name": "'+b+',"\n "author": "'+author+'"\n }'
         
         file_name =b+'.json'
-        f = open('json/'+file_name, "r+")
+        f = open('json/'+file_name, "a+")
         f.write(txt)
         f.close()
         i=i+2
