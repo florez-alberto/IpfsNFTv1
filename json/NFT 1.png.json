@@ -4,4 +4,10 @@
  "image": "https://ipfs.io/ipfs/QmWbhkeq2mYRzz2C86Rk1yQAJnteoyqa7T2VPtFBDz2wZJ",
  "name": "NFT 1.png,"
  "author": "Tata"
+ }{
+ "description": "A lovely piece of art <3",
+ "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",
+ "image": "https://ipfs.io/ipfs/QmWbhkeq2mYRzz2C86Rk1yQAJnteoyqa7T2VPtFBDz2wZJ",
+ "name": "NFT 1.png,"
+ "author": "Tata"
  }
