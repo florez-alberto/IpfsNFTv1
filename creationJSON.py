@@ -1,25 +1,30 @@
 import os
-import ipfsApi
+import ipfshttpclient
+
+
+client = ipfshttpclient.connect()
 
 def set_img_hashes():
-    api = ipfsApi.Client('127.0.0.1', 5001)
     
 
     dir_names=os.listdir("img")
     img_ipfs_list=[]
     
     list_files=list(range(0, len(dir_names)))
+    print(list_files)
     
-    for i in range (0,len(dir_names)):
-        list_files[i]=os.listdir('img/'+dir_names[i])
+    #for i in range (0,len(dir_names)):
+     #   print(dir_names)
+      #  list_files[i]=os.listdir('img/'+dir_names[i])
+
         
-        for y in range (0,len(list_files[i])):
-            a=api.add('img/'+dir_names[i]+'/'+list_files[i][y])
-            img_ipfs_list.extend((a[0]['Hash'],list_files[i][y]))
+       # for y in range (0,len(list_files[i]))
+        #    res = client.add('img/'+dir_names[i]+'/'+list_files[i][y])
+         #   img_ipfs_list.extend(client.cat(res['Hash']))
     
-    return img_ipfs_list
+    #return img_ipfs_list
     
-    
+    exit()
 
     
 def set_json(img_ipfs_list):   
@@ -49,10 +54,10 @@ def set_json(img_ipfs_list):
         a=str(img_ipfs_list[i])
         b=str(img_ipfs_list[i+1])
     
-        txt='{\n "description": "'+description+'",\n "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",\n "image": "https://ipfs.io/ipfs/'+a+'",\n "name": "'+b+',"\n "author": "'+author+'"\n }'
+        txt='{\n "description": "'+description+'",\n "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",\n "image": "https://ipfs.io/ipfs/'+a+'",\n "name": "'+b+'",\n "author": "'+author+'"\n }'
         
         file_name =b+'.json'
-        f = open('json/'+file_name, "r+")
+        f = open('json/'+file_name, "w+")
         f.write(txt)
         f.close()
         i=i+2
