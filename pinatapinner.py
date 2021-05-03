@@ -21,12 +21,6 @@ pinFile = "https://api.pinata.cloud/psa/pins"
 
 print(type(headers))
 
-r = requests.get(url=pinFile, headers=headers2)
-print(r.content)
-print(r.status_code)
-print(r.json())
-
-exit()
 
 for i in range(len(data)):
     pin={
