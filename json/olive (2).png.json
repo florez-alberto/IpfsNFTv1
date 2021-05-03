@@ -1,7 +1,1 @@
-{
- "description": "A lovely piece of art <3",
- "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",
- "image": "https://ipfs.io/ipfs/QmdmbNM1WvQVoZjt8b1KpR27AfthBzHehHqxzanRZa2H3a",
- "name": "olive (2).png,"
- "author": "Toutou"
- }
+{ "description": "A lovely piece of art <3", "external_url": "https://gateway.pinata.cloud/ipfs/QmdmbNM1WvQVoZjt8b1KpR27AfthBzHehHqxzanRZa2H3a", "image": "https://ipfs.io/ipfs/QmdmbNM1WvQVoZjt8b1KpR27AfthBzHehHqxzanRZa2H3a", "name": "olive (2).png", "author": "Gamatar" }

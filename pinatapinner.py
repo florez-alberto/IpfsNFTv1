@@ -17,22 +17,28 @@ headers = {'pinata_api_key': 'b72a53c3cf2970cdeb99' ,
 headers2 = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI1NDMwMzE3YS1lYjIxLTQzOWQtOTFhOS01NGI1MjZjNTExNmUiLCJlbWFpbCI6InU1MTEuNTExLjUxMXVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siaWQiOiJOWUMxIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZX0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6ImI3MmE1M2MzY2YyOTcwY2RlYjk5Iiwic2NvcGVkS2V5U2VjcmV0IjoiYmUxNTY2ODYxNjg2MjY0MzQzNWYyOGUwMjlhZTVjZmU5MWQ0ZWRlM2ZmMjY1MjQ1ODExNGMzZDQ0N2FjYjQxMSIsImlhdCI6MTYxOTk3MTM4N30.lkwJ6aHx9ByF7uXLVkFIKeHe9mf7DBlrapK_4fYh1JQ' } #(put your personal pinata secret api key here)
 
 
-pinFile = "https://api.pinata.cloud/pins"
+pinFile = "https://api.pinata.cloud/psa/pins"
 
 print(type(headers))
 
-
-pin={
-"cid": data[0]["Hash"],
-"name": data[0]["Name"]
-}
-
-print(type(pin))
-
-r = requests.post(url=pinFile , json = pin, headers= headers2)
-
+r = requests.get(url=pinFile, headers=headers2)
 print(r.content)
 print(r.status_code)
 print(r.json())
+
+exit()
+
+for i in range(len(data)):
+    pin={
+    "cid": data[i]["Hash"],
+    "name": data[i]["Name"]
+    }
+
+
+
+    r = requests.post(url=pinFile , json = pin, headers= headers2)
+
+    print(r.status_code)
+
 
 

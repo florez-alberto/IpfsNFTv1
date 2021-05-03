@@ -1,7 +1,1 @@
-{
- "description": "A lovely piece of art <3",
- "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",
- "image": "https://ipfs.io/ipfs/QmYoCUM9msiD3pARo4vyVVKZZLCbE2RidoXFBwkTERK9Y2",
- "name": "NFT 10.png,"
- "author": "Tata"
- }
+{ "description": "First Farmers of the Galaxy", "external_url": "https://gateway.pinata.cloud/ipfs/QmYoCUM9msiD3pARo4vyVVKZZLCbE2RidoXFBwkTERK9Y2", "image": "https://ipfs.io/ipfs/QmYoCUM9msiD3pARo4vyVVKZZLCbE2RidoXFBwkTERK9Y2", "name": "NFT 10.png", "author": "Paps" }

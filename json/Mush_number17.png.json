@@ -1,7 +1,1 @@
-{
- "description": "A lovely piece of art <3",
- "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",
- "image": "https://ipfs.io/ipfs/QmNmx3fmVVfWEEuWH8QrtyMTjvUpabzWmAdeQxsduKfK8r",
- "name": "Mush_number17.png,"
- "author": "Toto"
- }
+{ "description": "Algorithmic shuffling with fractals", "external_url": "https://gateway.pinata.cloud/ipfs/QmNmx3fmVVfWEEuWH8QrtyMTjvUpabzWmAdeQxsduKfK8r", "image": "https://ipfs.io/ipfs/QmNmx3fmVVfWEEuWH8QrtyMTjvUpabzWmAdeQxsduKfK8r", "name": "Mush_number17.png", "author": "Paps" }

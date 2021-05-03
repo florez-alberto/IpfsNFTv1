@@ -1,7 +1,1 @@
-{
- "description": "A lovely piece of art <3",
- "external_url": "https://gateway.pinata.cloud/ipfs/<hash>",
- "image": "https://ipfs.io/ipfs/QmVH4gQ33TKGyrpSk9nZ6qnwRJ51kgQqKfnwtQq4AMSP9d",
- "name": "NFT 5.png,"
- "author": "Tata"
- }
+{ "description": "A lovely piece of art <3", "external_url": "https://gateway.pinata.cloud/ipfs/QmVH4gQ33TKGyrpSk9nZ6qnwRJ51kgQqKfnwtQq4AMSP9d", "image": "https://ipfs.io/ipfs/QmVH4gQ33TKGyrpSk9nZ6qnwRJ51kgQqKfnwtQq4AMSP9d", "name": "NFT 5.png", "author": "Gamatar" }
