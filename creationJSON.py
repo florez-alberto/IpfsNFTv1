@@ -24,7 +24,7 @@ def set_img_hashes():
         list_files=os.listdir('img/'+i)
         for y in list_files:
             res = api.add('img/'+i+'/'+y)
-            img_ipfs_list.append(res['Hash'])
+            img_ipfs_list.append(res)
             print(img_ipfs_list)
     
     return img_ipfs_list
