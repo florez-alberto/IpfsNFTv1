@@ -1,32 +1,42 @@
 import os
-import ipfshttpclient
+import ipfsapi
+import re
+import json
 
-
-client = ipfshttpclient.connect()
 
 def set_img_hashes():
-    
+    api = ipfsapi.Client('127.0.0.1', 5001)
 
     dir_names=os.listdir("img")
     img_ipfs_list=[]
     
     list_files=list(range(0, len(dir_names)))
     print(list_files)
-    
-    #for i in range (0,len(dir_names)):
-     #   print(dir_names)
-      #  list_files[i]=os.listdir('img/'+dir_names[i])
+    print(dir_names)
+    result=bool(re.search('DS', dir_names[2]))
 
-        
-       # for y in range (0,len(list_files[i]))
-        #    res = client.add('img/'+dir_names[i]+'/'+list_files[i][y])
-         #   img_ipfs_list.extend(client.cat(res['Hash']))
+    okay_items = [item for item in dir_names if not bool(re.search('DS', item))]
     
-    #return img_ipfs_list
-    
-    exit()
+    directory_number= [ dir_names.index(i) for i in okay_items if dir_names.index(i)]
 
+
+    for i in okay_items:
+        list_files=os.listdir('img/'+i)
+        for y in list_files:
+            res = api.add('img/'+i+'/'+y)
+            img_ipfs_list.append(res['Hash'])
+            print(img_ipfs_list)
     
+    return img_ipfs_list
+
+img_hash_list= set_img_hashes()
+
+f = open('json/list_ipfs.json', "w+")
+f.write(json.dumps(img_hash_list))
+f.close()
+
+exit()
+
 def set_json(img_ipfs_list):   
     
     author_list=["Titi","Toto","Tutu","Tata","Toutou","Tumtum","Tochtoch"]
