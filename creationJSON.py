@@ -3,6 +3,27 @@ import ipfsapi
 import re
 import json
 
+#rename the images
+dir_names=os.listdir("img")
+img_ipfs_list=[]
+list_files=list(range(0, len(dir_names)))
+result=bool(re.search('DS', dir_names[2]))
+okay_items = [item for item in dir_names if not bool(re.search('DS', item))]
+
+okay_items= sorted(okay_items)
+
+print(okay_items)
+
+n=1
+for i in okay_items:
+    list_files=os.listdir('img/'+i)
+    for y in list_files:
+        os.rename('img/'+i+'/'+y, 'img/'+i+'/'+str(n)+'.png')
+        n=n+1
+
+
+exit()
+
 
 def set_img_hashes():
     api = ipfsapi.Client('127.0.0.1', 5001)
