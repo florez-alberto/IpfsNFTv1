@@ -8,9 +8,11 @@ import json
 with open('json/list_ipfs.json') as f:
   data = json.load(f)
 
-print(data[0])
-  
-author_list=["Paps", "Alberto", "Gamatar","JC","Freelancer", "Berserk", "Brotoshi", "Tchoco" , "Mlolotte", "NightlyCatGirl" , "OrionDeimos"]
+list_hashes= [[int(data[y]["Name"][:-3]),data[y]["Hashes"]] for y in data]
+print(list_hashes)
+exit()
+list_files= sorted(list_files)
+author_list=["Papipaz", "Alberto", "Gamatar","JC","Freelancer", "Berserk", "Brotoshi", "Tchoco" , "Mlolotte", "NightlyCatGirl" , "OrionDeimos"]
 descriptions=["The first ones","Algorithmic shuffling with fractals","First Farmers of the Galaxy","A lovely piece of art <3", "Various Collabs", "Fungi Bizare Ploriferarion Part 1" , "Legendaries"]
 #author="0"
    
