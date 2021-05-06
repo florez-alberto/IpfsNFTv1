@@ -4,11 +4,12 @@ import json
 
 
 
-with open('json/list_ipfs.json') as f:
+with open('metadata_json_hash_list.json') as f:
   data = json.load(f)
 
 
-list_hashes=[ [y["Hash"],int(y["Name"][:-4])] for y in data]
+list_hashes=[ [y["Hash"],int(y["Name"][:-5])] for y in data]
+print(list_hashes)
 
 def Sort(sub_li):
   
