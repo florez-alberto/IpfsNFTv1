@@ -29,7 +29,7 @@ print(list_hashes )
 f = open('metadata_json_hash_list.txt', "w+")
 n=0
 for i in list_hashes:
-    txt=  txt=' _tokenURIs['+str(n)+']= "'+i+'";'
+    txt=  txt='_tokenURIs['+str(n)+']= "'+i+'";'
     f.write(txt+"\n")
     n=n+1
 
