@@ -29,8 +29,14 @@ print(list_hashes )
 f = open('metadata_json_hash_list.txt', "w+")
 n=0
 for i in list_hashes:
-    txt=  txt='_tokenURIs['+str(n)+']= "'+i+'";'
-    f.write(txt+"\n")
+    txt= '"'+i+'",'
+    if n%8==0:
+      if n==0:
+        f.write(txt)
+      else:
+        f.write(txt+"\n")
+    else:
+      f.write(txt)
     n=n+1
 
 
